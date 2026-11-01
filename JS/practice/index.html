@@ -1,0 +1,33 @@
+
+<script>
+    let arr=[]
+    let add = (...a)=>{
+    a.forEach((ab,i)=>{
+        const myPromise = new Promise ((res,rej)=>{
+            return res(ab);
+
+        }).then((v)=>{
+            if(v%2==0){
+                // console.log("even");
+                arr[i]="even"
+                
+            }else{
+                // console.log("odd");
+                arr[i]="odd"
+
+                
+            }
+        }).catch((e)=>{
+
+            console.log(e);
+            
+        })
+    })
+    console.log(arr);
+
+
+
+    }
+
+    add(9,87987,899,98809,8,8,8,8,0)
+</script>

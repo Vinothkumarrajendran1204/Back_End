@@ -1,0 +1,46 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        const product = {
+    name: "Laptop",
+    price: 60000,
+    category: "Electronics"
+};
+
+// Object Destructuring + Arrow Function
+const getProductInfo = () => {
+    const { name, price, category } = product;
+
+    return `Product: ${name}
+Price: ₹${price}
+Category: ${category}`;
+};
+
+console.log(getProductInfo());
+
+// Object Spread
+const newProduct = {
+    ...product,
+    price: 65000
+};
+
+console.log(`
+${newProduct.name}
+Price: ${newProduct.price}
+Category: ${newProduct.category}
+`);
+
+// Original product remains unchanged
+console.log(product.price);
+
+    </script>
+
+</body>
+</html>

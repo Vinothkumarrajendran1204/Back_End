@@ -1,0 +1,121 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        
+ // 1. Check whether any number is greater than 35 using some()
+
+let numbers = [10, 20, 30, 40];
+
+let result1 = numbers.some(num => num > 35);
+
+console.log("1. Any number greater than 35:", result1);
+
+
+// 2. Check whether all students scored above 50 using every()
+
+let marks = [65, 75, 80, 55, 90];
+
+let result2 = marks.every(mark => mark > 50);
+
+console.log("2. All students scored above 50:", result2);
+
+
+// 3. Check whether "admin" exists using includes()
+
+let roles = ["user", "manager", "admin", "employee"];
+
+let result3 = roles.includes("admin");
+
+console.log("3. Admin exists:", result3);
+
+
+// 4. Calculate the total salary of five employees using reduce()
+
+let salaries = [20000, 25000, 30000, 35000, 40000];
+
+let totalSalary = salaries.reduce((total, salary) => total + salary, 0);
+
+console.log("4. Total salary:", totalSalary);
+
+
+// 5. Calculate shopping cart total using price * quantity
+
+let cart = [
+    { name: "Laptop", price: 60000, quantity: 1 },
+    { name: "Mouse", price: 500, quantity: 2 },
+    { name: "Keyboard", price: 1000, quantity: 1 }
+];
+
+let cartTotal = cart.reduce(
+    (total, item) => total + item.price * item.quantity,
+    0
+);
+
+console.log("5. Shopping cart total:", cartTotal);
+
+
+// 6. Find employees earning more than ₹30,000 using filter()
+
+let employees = [
+    { id: 1, name: "Arun", salary: 25000 },
+    { id: 2, name: "Vinoth", salary: 40000 },
+    { id: 3, name: "Kumar", salary: 35000 },
+    { id: 4, name: "Ravi", salary: 28000 }
+];
+
+let highSalaryEmployees = employees.filter(emp => emp.salary > 30000);
+
+console.log("6. Employees earning above ₹30,000:", highSalaryEmployees);
+
+
+// 7. Find a student by ID using find()
+
+let students = [
+    { id: 101, name: "Arun", marks: 80 },
+    { id: 102, name: "Vinoth", marks: 90 },
+    { id: 103, name: "Ravi", marks: 70 }
+];
+
+let student = students.find(student => student.id === 102);
+
+console.log("7. Student found:", student);
+
+
+// 8. Get the index of a product by ID using findIndex()
+
+let products = [
+    { id: 1, name: "Laptop", price: 60000 },
+    { id: 2, name: "Mouse", price: 500 },
+    { id: 3, name: "Keyboard", price: 1000 }
+];
+
+let productIndex = products.findIndex(product => product.id === 2);
+
+console.log("8. Product index:", productIndex);
+
+
+// 9. Sort products by price from low to high
+
+let sortedProducts = [...products].sort((a, b) => a.price - b.price);
+
+console.log("9. Products sorted by price:", sortedProducts);
+
+
+// 10. Extract only employee names using map()
+
+let employeeNames = employees.map(emp => emp.name);
+
+console.log("10. Employee names:", employeeNames);
+
+
+    </script>
+
+</body>
+</html>
